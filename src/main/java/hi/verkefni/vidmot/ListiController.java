@@ -78,6 +78,7 @@ public class ListiController {
             { System.out.println("io"); }
 
             listi.addLag(value.getPath() + "," + value.getNafn());
+            fxListView.setItems(listi.getListi());
         });
     }
 
