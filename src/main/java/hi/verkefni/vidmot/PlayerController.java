@@ -37,10 +37,9 @@ public class PlayerController {
 
     private void getListFiles(final File dir)
     {
+        System.out.println(dir);
         for(final File fileEntry : dir.listFiles())
-        {
                 Lagalistar.addListi(fileEntry.getPath());
-        }
     }
 
     @FXML
@@ -49,7 +48,7 @@ public class PlayerController {
         listi = FXCollections.observableArrayList();
 
         if(Lagalistar.size() == 0)
-            getListFiles(new File(getClass().getResource("lists").getFile()));
+            getListFiles(new File("src/main/resources/hi/verkefni/vidmot/lists"));
         for(int i = 0; i < Lagalistar.size(); i++)
             listi.add(Lagalistar.getListi(i).getName());
 
