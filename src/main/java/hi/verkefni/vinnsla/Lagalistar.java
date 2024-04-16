@@ -15,6 +15,10 @@ public class Lagalistar {
 
     private static int index;
 
+    /***
+     * bætir við nýjum lista í lista af lagalistum
+     * @param path path á lista skránni
+     */
     public static void addListi(String path)
     {
         try {
@@ -23,6 +27,11 @@ public class Lagalistar {
         }catch(IOException io)
         {System.out.println("io");}
     }
+
+    /***
+     * skilar fjölda lagalista
+     * @return fjöldi lagalista
+     */
     public static int size()
     {
         return listar.size();

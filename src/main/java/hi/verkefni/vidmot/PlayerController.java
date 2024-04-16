@@ -35,6 +35,10 @@ public class PlayerController {
     private NewListDialogue listDialogue;
 
 
+    /***
+     * Finnur allar skrár í directory dir
+     * @param dir directory til að leyta
+     */
     private void getListFiles(final File dir)
     {
         System.out.println(dir);

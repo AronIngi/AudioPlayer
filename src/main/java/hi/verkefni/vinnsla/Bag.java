@@ -13,6 +13,10 @@ public class Bag<E>
 
 	int count;
 
+	/***
+	 * Smiður sem býr til Bag hlut
+	 *
+	 */
 	public Bag()
 	{
 		first = new Node();
@@ -20,6 +24,10 @@ public class Bag<E>
 		count = 0;
 	}
 
+	/**
+	 * bætir við nýjum hlut
+	 * @param item hlutur til að bæta við
+	 */
 	public void add(E item)
 	{
 		Node<E> next = new Node<E>();
@@ -30,18 +38,20 @@ public class Bag<E>
 		count++;
 	}
 
-	public boolean isEmpty()
-	{
-		if(first == last)
-			return true;
-		return false;
-	}
-
+	/**+
+	 * Skilar stærð pokans
+	 * @return fjöldi hluta í poka
+	 */
 	public int size()
 	{
 		return count;
 	}
 
+	/***
+	 * finnur og skilar hlut k í listanum
+	 * @param k index
+	 * @return hlutur á index k
+	 */
 	public E peek(int k)
 	{
 		E item = first.item;

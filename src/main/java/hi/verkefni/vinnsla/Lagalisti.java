@@ -54,6 +54,10 @@ public class Lagalisti {
         return true;
     }
 
+    /***
+     * Bætir við lagi í listann
+     * @param data strengur sem geymir upplýsingar um nafn lags og path á lagið
+     */
     public void addLag(String data)
     {
         String[] properties = data.split(",");
@@ -121,6 +125,10 @@ public class Lagalisti {
         return path;
     }
 
+    /***
+     * skilar nafni lagalistans
+     * @return nafn lagalistans
+     */
     public String getName() {return name;}
 
 }
